@@ -1,0 +1,13 @@
+{
+  "database": {
+    "adapter": "mysql",
+    "host": "localhost",
+    "username": "root",
+    "password": "",
+    "dbname": "poemdaily"
+  },
+  "company": {
+    "name": "Poem Daily",
+    "domain": "http://localhost/poemdaily/"
+  }
+}

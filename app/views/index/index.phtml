@@ -1,0 +1,318 @@
+<body>
+
+<!-- NAVBAR START -->
+<nav class="navbar navbar-expand-lg py-lg-3 navbar-dark">
+    <div class="container">
+
+        <!-- logo -->
+        <a href="index.html" class="navbar-brand me-lg-5">
+            <img src="assets/images/TOPLOGO.png" alt="logo" class="logo-dark" height="50"  />
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="mdi mdi-menu"></i>
+        </button>
+
+        <!-- menus -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+            <!-- left menu -->
+            <ul class="navbar-nav me-auto align-items-center">
+                <li class="nav-item mx-lg-1">
+                    <a class="nav-link active" href="">Inicio</a>
+                </li>
+                <li class="nav-item mx-lg-1">
+                    <a class="nav-link" href="#_services">Informacion</a>
+                </li>
+                <li class="nav-item mx-lg-1">
+                    <a class="nav-link" href="#_contact">Contacto</a>
+                </li>
+            </ul>
+
+            <!-- right menu -->
+            <ul class="navbar-nav ms-auto ">
+                <li class="nav-item">
+                    <a href="<?= $login_url; ?>" class="btn btn-success rounded-pill me-2">
+                        Iniciar sesión
+                    </a>
+                    <a href="<?= $register_url; ?>"  class="btn btn-light rounded-pill">
+                        Registrate
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<!-- NAVBAR END -->
+
+<!-- START HERO -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-5">
+                <div class="mt-md-4">
+                    
+                    <h2 class="text-white fw-normal mb-4 mt-3 hero-title">
+                    El Lugar Favorito de Escritores Para Expresar La Mente y Corazon
+                    </h2>
+                    <p class="mb-4 font-16 text-white-50">Poem Daily es una red social donde podras encontrar poemas para todos los gustos.
+                        Desde autores desconocidos hasta los más reconocidos. Descubre tu siguiente poema favorito hoy mismo.
+                    </p>
+
+                    <a href="<?= $register_url; ?>" target="_blank" class="btn btn-success">Registrate <i
+                                class=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+</svg></i></a>
+                </div>
+            </div>
+            <div class="col-md-5 offset-md-2">
+                <div class="text-md-end mt-3 mt-md-0">
+                    <img src="assets/images/Logonew3.png" alt="" class="img-fluid" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END HERO -->
+
+<!-- START SERVICES -->
+<section class="py-5" id = "_services">
+    <div class="container">
+        <div class="row py-4">
+            <div class="col-lg-12">
+                <div class="text-center">
+                    <h1 class="mt-0"><i class=""><svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" style="margin-bottom: 20px" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+  <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+</svg></i></h1>
+                    <h3>El Mejor Sitio De  <span class="text-primary">Poemas</span> Online a un solo <span
+                                class="text-primary">click</span></h3>
+                    <p class="text-muted mt-2">Unete a millones de usuarios que comparten sus gustos sobre poemas de diferentes epocas y temáticas
+                        <br>Comparte tus pensamientos, tus emociones y autores favoritos en un solo lugar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="text-center p-2 p-sm-3">
+                    <div class="avatar-sm m-auto">
+                                <span class="avatar-title bg-primary-lighten rounded-circle">
+                                    <i class=""></i><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                    <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41m-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9"/>
+                                    <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5 5 0 0 0 8 3M3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9z"/>
+                                    </svg>
+                                </span>
+                    </div>
+                    <h4 class="mt-3">Poema Diario</h4>
+                    <p class="text-muted mt-2 mb-0">Poema diario aleatorio que podría ayudarte a descubrir tu categoria favorita
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="text-center p-2 p-sm-3">
+                    <div class="avatar-sm m-auto">
+                                <span class="avatar-title bg-primary-lighten rounded-circle">
+                                    <i class=""><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-emoji-heart-eyes-fill" viewBox="0 0 16 16">
+                                                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M4.756 4.566c.763-1.424 4.02-.12.952 3.434-4.496-1.596-2.35-4.298-.952-3.434m6.559 5.448a.5.5 0 0 1 .548.736A4.5 4.5 0 0 1 7.965 13a4.5 4.5 0 0 1-3.898-2.25.5.5 0 0 1 .548-.736h.005l.017.005.067.015.252.055c.215.046.515.108.857.169.693.124 1.522.242 2.152.242s1.46-.118 2.152-.242a27 27 0 0 0 1.109-.224l.067-.015.017-.004.005-.002zm-.07-5.448c1.397-.864 3.543 1.838-.953 3.434-3.067-3.554.19-4.858.952-3.434z"/>
+                                                </svg></i>
+                                </span>
+                    </div>
+                    <h4 class="mt-3">Recomendaciones</h4>
+                    <p class="text-muted mt-2 mb-0">Recomendación de Poemas en base a tus gustos
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="text-center p-2 p-sm-3">
+                    <div class="avatar-sm m-auto">
+                                <span class="avatar-title bg-primary-lighten rounded-circle">
+                                    <i class=""><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                                </svg></i>
+                                </span>
+                    </div>
+                    <h4 class="mt-3">Plataforma Intuitiva</h4>
+                    <p class="text-muted mt-2 mb-0">Interfaz sencilla e intuitiva que permite introducir a personas de cualquier edad al mundo poético
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="text-center p-2 p-sm-3">
+                    <div class="avatar-sm m-auto">
+                                <span class="avatar-title bg-primary-lighten rounded-circle">
+                                    <i class=""><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+                                                <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z"/>
+                                                </svg></i>
+                                </span>
+                    </div>
+                    <h4 class="mt-3">Gran Red de Escritores</h4>
+                    <p class="text-muted mt-2 mb-0">Únete a un red alrededor del mundo llena de escritores que descubren su siguiente poema favorito en un solo click
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="text-center p-2 p-sm-3">
+                    <div class="avatar-sm m-auto">
+                                <span class="avatar-title bg-primary-lighten rounded-circle">
+                                    <i class=""><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-stickies-fill" viewBox="0 0 16 16">
+                                                <path d="M0 1.5V13a1 1 0 0 0 1 1V1.5a.5.5 0 0 1 .5-.5H14a1 1 0 0 0-1-1H1.5A1.5 1.5 0 0 0 0 1.5"/>
+                                                <path d="M3.5 2A1.5 1.5 0 0 0 2 3.5v11A1.5 1.5 0 0 0 3.5 16h6.086a1.5 1.5 0 0 0 1.06-.44l4.915-4.914A1.5 1.5 0 0 0 16 9.586V3.5A1.5 1.5 0 0 0 14.5 2zm6 8.5a1 1 0 0 1 1-1h4.396a.25.25 0 0 1 .177.427l-5.146 5.146a.25.25 0 0 1-.427-.177z"/>
+                                                </svg></i>
+                                </span>
+                    </div>
+                    <h4 class="mt-3">Variedad de Autores</h4>
+                    <p class="text-muted mt-2 mb-0">Desde autores anónimos hasta autores reconocidos de diferentes épocas para la variedad de gustos
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="text-center p-2 p-sm-3">
+                    <div class="avatar-sm m-auto">
+                                <span class="avatar-title bg-primary-lighten rounded-circle">
+                                    <i class=""><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                                                </svg></i>
+                                </span>
+                    </div>
+                    <h4 class="mt-3">Compartelo en tu Red</h4>
+                    <p class="text-muted mt-2 mb-0">Elige tu poema favorito y compartelo con tus familiares y amigos en tus redes sociales
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- END SERVICES -->
+
+
+<!-- START CONTACT -->
+<section class="py-5 bg-light-lighten border-top border-bottom border-light" id = "_contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="text-center">
+                    <h3>Ponte En <span class="text-primary">Contacto</span></h3>
+                    <p class="text-muted mt-2">Por favor llena todos los campos y nos pondremos en contacto contigo en breve. Para mas
+                        <br>informacion contactanos.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center mt-3">
+            <div class="col-md-4">
+                <p class="text-muted mt-4"><span class="fw-bold">Email Address:</span><br> <span class="d-block mt-1">poemdaily@gmail.com</span></p>
+                <p class="text-muted mt-4"><span class="fw-bold">Domicilio de Oficina:</span><br> <span class="d-block mt-1">9382 Guadalajara, Jalisco</span></p>
+                <p class="text-muted mt-4"><span class="fw-bold">Horario de Oficina:</span><br> <span class="d-block mt-1">9:00AM To 6:00PM</span></p>
+            </div>
+
+            <div class="col-md-8">
+                <form>
+                    <div class="row mt-4">
+                        <div class="col-lg-6">
+                            <div class="mb-2">
+                                <label for="fullname" class="form-label">Nombre</label>
+                                <input class="form-control form-control-light" type="text" id="fullname" placeholder="Name...">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="mb-2">
+                                <label for="emailaddress" class="form-label">Correo</label>
+                                <input class="form-control form-control-light" type="email" required="" id="emailaddress" placeholder="Enter you email...">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-1">
+                        <div class="col-lg-12">
+                            <div class="mb-2">
+                                <label for="subject" class="form-label">Titulo</label>
+                                <input class="form-control form-control-light" type="text" id="subject" placeholder="Enter subject...">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-1">
+                        <div class="col-lg-12">
+                            <div class="mb-2">
+                                <label for="comments" class="form-label">Mensaje</label>
+                                <textarea id="comments" rows="4" class="form-control form-control-light" placeholder="Type your message here..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-12 text-end">
+                            <button class="btn btn-primary">Enviar <i
+                                        class="mdi mdi-telegram ms-1"></i> </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END CONTACT -->
+
+<!-- START FOOTER -->
+<footer class="bg-dark py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="assets/images/TOPLOGO.png" alt="logo" class="logo-dark" height="22" />
+                <p class="text-muted mt-4">Para todos los gustos
+                    <br> Desde autores desconocidos hasta los más reconocidos.
+                    <br> Descubre tu siguiente poema favorito hoy mismo.</p>
+
+                <ul class="social-list list-inline mt-3">
+                    <li class="list-inline-item text-center">
+                        <a href="javascript: void(0);" class="social-list-item border-primary text-primary"><i class=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+</svg></i></a>
+                    </li>
+                    <li class="list-inline-item text-center">
+                        <a href="javascript: void(0);" class="social-list-item border-danger text-danger"><i class=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+  <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+</svg></i></a>
+                    </li>
+                    <li class="list-inline-item text-center">
+                        <a href="javascript: void(0);" class="social-list-item border-info text-info"><i class=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+  <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+</svg></i></a>
+                    </li>
+                    <li class="list-inline-item text-center">
+                        <a href="javascript: void(0);" class="social-list-item border-secondary text-secondary"><i class=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+</svg></i></a>
+                    </li>
+                </ul>
+
+            </div>
+
+            
+
+            
+
+            
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="mt-5">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- END FOOTER -->
+<!-- Vendor js -->
+<script src="assets/js/vendor.min.js"></script>
+
+<!-- App js -->
+<script src="assets/js/app.min.js"></script>
+
+</body>

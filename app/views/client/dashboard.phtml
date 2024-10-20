@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dashboard del Cliente</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        body {
+            background-color: #f9fafd;
+            font-family: 'Arial', sans-serif;
+        }
+
+        #menu {
+            background-color: #313a46;
+            color: #ffffff;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        #poemas {
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+<script>
+    function loadRandom(){
+        window.location.href='/poemdaily/client/random';
+    }
+    function saveLike() {
+        axios({
+            method: 'post',
+            url: '/poemdaily/client/like/<?=$poem->explication?>/<?=$poem->id?>',
+        }).then(function (response) {
+            console.log(response);
+            alert("¡Ahora te gusta este poema!");
+        });
+    }
+    function saveFavorite(){
+        axios({
+            method: 'post',
+            url: '/poemdaily/client/favorite/<?=$poem->explication?>/<?=$poem->id?>',
+        }).then(function (response) {
+            console.log(response);
+            alert("¡Poema guardado en favoritos!");
+        });
+    }
+</script>
+
+<nav class="navbar navbar-expand-lg navbar-dark" id="menu" style ="background-color: #7e70f0;">
+    <div class="container">
+    <a class="navbar-brand" href="#">POEM DAILY</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li>
+                    <a class="nav-link" href="/poemdaily/client/dashboard">Ver Recomendados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/poemdaily/client/favview">Ver Favoritos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href='/poemdaily/client/random'>Ver Aleatorio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href='<?= $logout_url; ?>'>Cerrar Sesión</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container" id="poemas">
+    <!-- Aquí se mostrarán los poemas -->
+    <h2 class="mb-4"><?= $mode ?></h2>
+    <h3 style="text-transform: uppercase;"><?= $poem->title; ?></h3>
+    <p style="margin: 50px; text-align: justify;" class="text-center"><?= $poem->content; ?></p>
+    <p style="margin: 50px; text-align: justify;">
+        <?=
+            (isset($poem->explication) && $poem->explication != '') || (isset($poem->genre) && $poem->genre != '') ? 'Categoría: ' : '';
+            echo isset($poem->explication) ? utf8_encode($poem->explication) : utf8_encode($poem->genre)
+        ?>
+    </p>
+
+    <div class="dashboard-button-container">
+        <?= !isset($hide) ? '<button class="btn btn-primary" type="submit" onClick="saveLike()"><i class=""></i> Me gusta </button>
+        <button class="btn btn-danger" type="submit" onclick="saveFavorite()"><i class=""></i> Agregar a favoritos </button>
+        <button class="btn btn-dark" type="submit" onclick="imprimirPagina()"><i class=""></i> Imprimir Poema </button>
+        <button class="btn btn-primary" type="submit" onclick="recargarPagina()"><i class=""></i> Siguiente </button>' : '' ?>
+    </div>
+</div>
+
+<!-- Bootstrap JS y dependencias (jQuery y Popper.js) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>function recargarPagina() {location.reload();}</script>
+
+<!--Recarga la pagina para mostrar un poema diferente (Mas sencillo a comparacion de mandar a llamar controlador) -->
+<!--Imprimir la pagina -->
+<script> function imprimirPagina() { window.print(); }</script>
+</body>
+</html>

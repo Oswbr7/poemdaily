@@ -1,0 +1,78 @@
+<body class="authentication-bg pb-0">
+
+<div class="auth-fluid">
+    <!--Auth fluid left content -->
+    <div class="auth-fluid-form-box">
+        <div class="align-items-center d-flex h-100">
+            <div class="card-body">
+
+                <!-- Logo -->
+                <div class="auth-brand text-center text-lg-start">
+                    <a href="index.html" class="logo-dark">
+                        <span><img src="assets/images/loginlogo.png" alt="dark logo" height="40"></span>
+                    </a>
+                    <a href="index.html" class="logo-light">
+                        <span><img src="assets/images/TOPLOGO.png" alt="logo" height="40"></span>
+                    </a>
+                </div>
+
+                <!-- title-->
+            
+                <h2 class="mt-4 text-center">Te damos la bienvenida a POEM DAILY </h2>
+
+                <!-- form -->
+                <form action="<?= $this->url->get('login/login') ?>" method="post">
+                    <div class="mb-3">
+                        <label for="emailaddress" class="form-label">Correo Electronico</label>
+                        <input class="form-control" type="email" id="emailaddress" name="email" required="" placeholder="Correo">
+                    </div>
+                    <div class="mb-3">
+                        <!--
+                        <a href="pages-recoverpw-2.html" class="text-muted float-end"><small>Forgot your password?</small></a>
+                        -->
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input class="form-control" type="password" required="" id="password" name="password" placeholder="Contraseña">
+                    </div>
+                    <div class="d-grid mb-0 text-center">
+                        <button class="btn btn-primary" type="submit"><i class=""></i> Iniciar Sesion <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5m-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5"/>
+</svg></button>
+                    </div>
+                </form>
+                <!-- end form-->
+
+                <!-- Footer-->
+                <footer class="footer footer-alt">
+                    <p class="text-muted">¿No tienes cuenta? <a href="<?= $register_url; ?>" class="text-muted ms-1"><b>Registrate</b></a></p>
+                </footer>
+
+            </div> <!-- end .card-body -->
+        </div> <!-- end .align-items-center.d-flex.h-100-->
+    </div>
+    <!-- end auth-fluid-form-box-->
+
+    <!-- Auth fluid right content -->
+    <div class="auth-fluid-right text-center" style="background-color: #7e70f0">
+    <span><img src="assets/images/login-testimonial.jpg" alt="dark logo" height="780" width="100%" style="object-fit: cover;"></span>
+        <div class="auth-user-testimonial">
+            <h2 class="mb-3">Descubre tu siguiente POEMA favorito</h2>
+            <p class="lead"><i class=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-heart-fill" viewBox="0 0 16 16">
+  <path d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+</svg></i> ¡Expresa lo que no te atreves con un POEMA!  <i class=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-heart-fill" viewBox="0 0 16 16">
+  <path d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+</svg></i></p>
+            <p>
+                - Poemdaily
+            </p>
+        </div> <!-- end auth-user-testimonial-->
+    </div>
+    <!-- end Auth fluid right content -->
+</div>
+<!-- end auth-fluid-->
+<!-- Vendor js -->
+<script src="assets/js/vendor.min.js"></script>
+
+<!-- App js -->
+<script src="assets/js/app.min.js"></script>
+
+</body>

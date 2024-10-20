@@ -1,0 +1,84 @@
+<body class="authentication-bg pb-0">
+
+<div class="auth-fluid">
+    <!--Auth fluid left content -->
+    <div class="auth-fluid-form-box">
+        <div class="align-items-center d-flex h-100">
+            <div class="card-body">
+
+                <!-- Logo -->
+                <div class="auth-brand text-center text-lg-start mb-2">
+                    <a href="index.html" class="logo-dark">
+                        <span><img src="assets/images/loginlogo.png" alt="dark logo" height="40"></span>
+                    </a>
+                    <a href="index.html" class="logo-light">
+                        <span><img src="assets/images/logo.png" alt="logo" height="22"></span>
+                    </a>
+                </div>
+
+                <!-- title-->
+                <h4 class="mt-4">REGISTRATE GRATIS</h4>
+
+                <!-- form -->
+                <form action="<?= $this->url->get('register/submit') ?>" class="needs-validation" method="post">
+                    <div class="mb-3">
+                        <label for="fullname" class="form-label">Nombre</label>
+                        <input class="form-control" type="text" id="fullname" name="name" placeholder="Ingresa tu nombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="emailaddress" class="form-label">Email</label>
+                        <input class="form-control" type="email" id="emailaddress" name="email" required placeholder="Ingresa tu email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input class="form-control" type="password" required id="password" name="password" placeholder="Ingresa tu contraseña">
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="checkbox-signup">
+                            <label class="form-check-label" for="checkbox-signup">Acepto <a href="javascript: void(0);" class="text-muted">los terminos y condiciones</a></label>
+                        </div>
+                    </div>
+                    <div class="mb-0 d-grid text-center">
+                        <button class="btn btn-primary" type="submit"><i class=""></i> Registrarse <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8m-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5"/>
+</svg></button>
+                    </div>
+                </form>
+                <!-- end form-->
+
+                <!-- Footer-->
+                <footer class="footer footer-alt">
+                    <p class="text-muted">¿Ya tienes una cuenta? <a href="<?= $login_url; ?>" class="text-muted ms-1"><b>Ingresa</b></a></p>
+                </footer>
+
+            </div> <!-- end .card-body -->
+        </div> <!-- end .align-items-center.d-flex.h-100-->
+    </div>
+    <!-- end auth-fluid-form-box-->
+
+    <!-- Auth fluid right content -->
+    <div class="auth-fluid-right text-center" style="background-color: #7e70f0">
+    <span><img src="assets/images/register-testimonial.jpeg" alt="dark logo" height="780" width="100%" style="object-fit: cover;"></span>
+        <div class="auth-user-testimonial">
+            <h2 class="mb-3">Descubre tu siguiente POEMA favorito</h2>
+            <p class="lead"><i class=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-heart-fill" viewBox="0 0 16 16">
+  <path d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+</svg></i> ¡Expresa lo que no te atreves con un POEMA!  <i class=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-heart-fill" viewBox="0 0 16 16">
+  <path d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+</svg></i></p>
+            <p>
+                - Poemdaily
+            </p>
+        </div> <!-- end auth-user-testimonial-->
+    </div>
+    <!-- end Auth fluid right content -->
+</div>
+<!-- end auth-fluid-->
+<!-- Vendor js -->
+<script src="assets/js/vendor.min.js"></script>
+
+<!-- App js -->
+<script src="assets/js/app.min.js"></script>
+
+</body>

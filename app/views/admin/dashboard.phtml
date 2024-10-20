@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dashboard del Administrador</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f9fafd;
+            font-family: 'Arial', sans-serif;
+        }
+
+        #menu {
+            background-color: #313a46;
+            color: #ffffff;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        #dashboard {
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #usuarios-card {
+            background-color: #eef2f7;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        #poemas-table {
+            width: 100%;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #cargarPoemas {
+            background-color: #eef2f7;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #cargarPoemas:hover {
+            background-color: #218838;
+        }
+
+        #poemas-count {
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark" id="menu">
+    <div class="container">
+        <a class="navbar-brand" href="#">Poem daily</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Usuarios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= $login_url; ?>">Cerrar Sesión</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container" id="dashboard">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="mb-4">Poemas de Alegría</h2>
+            <p class="text-center">Últimos 10 poemas agregados</p>
+            <table class="table table-striped" id="poemas-table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Autor</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php $i = 0; ?>
+                <?php foreach ($happy_poems_url as $item): ?>
+                    <tr>
+                        <th scope="row"><?= ++$i; ?></th>
+                        <td><?= $item->title; ?></td>
+                        <td><?= $item->author; ?></td>
+                    </tr>
+                    <?php if ($i === 10): ?>
+                        <?php break; ?>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+            <a id="cargarPoemas" href="<?= $get_happy_poems_url; ?>">Cargar Más Poemas</a>
+        </div>
+    </div>
+    <!-- Mostrar el número total de poemas -->
+    <p id="poemas-count">Número Total de Poemas: <?= count($happy_poems_url); ?></p>
+</div>
+
+<div class="container" id="dashboard">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="mb-4">Poemas de Amor</h2>
+            <table class="table table-striped" id="poemas-table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Autor</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php $i = 0; ?>
+                <?php foreach ($love_poems_url as $item): ?>
+                    <tr>
+                        <th scope="row"><?= ++$i; ?></th>
+                        <td><?= $item->title; ?></td>
+                        <td><?= $item->author; ?></td>
+                    </tr>
+                    <?php if ($i === 10): ?>
+                        <?php break; ?>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+            <a id="cargarPoemas" href="<?= $get_love_poems_url; ?>">Cargar Más Poemas</a>
+        </div>
+    </div>
+    <p id="poemas-count">Número Total de Poemas: <?= count($love_poems_url); ?></p>
+</div>
+
+<div class="container" id="dashboard">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="mb-4">Poemas de Desamor</h2>
+            <table class="table table-striped" id="poemas-table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Autor</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php $i = 0; ?>
+                <?php foreach ($heart_break_url as $item): ?>
+                    <tr>
+                        <th scope="row"><?= ++$i; ?></th>
+                        <td><?= $item->title; ?></td>
+                        <td><?= $item->author; ?></td>
+                    </tr>
+                    <?php if ($i === 10): ?>
+                        <?php break; ?>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+            <a id="cargarPoemas" href="<?= $get_heart_break_url; ?>">Cargar Más Poemas</a>
+        </div>
+    </div>
+    <p id="poemas-count">Número Total de Poemas: <?= count($heart_break_url); ?></p>
+</div>
+
+<div class="container" id="dashboard">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="mb-4">Poemas de Angustia</h2>
+            <table class="table table-striped" id="poemas-table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Autor</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php $i = 0; ?>
+                <?php foreach ($distrees_url as $item): ?>
+                    <tr>
+                        <th scope="row"><?= ++$i; ?></th>
+                        <td><?= $item->title; ?></td>
+                        <td><?= $item->author; ?></td>
+                    </tr>
+                    <?php if ($i === 10): ?>
+                        <?php break; ?>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+            <a id="cargarPoemas" href="<?= $get_distress_url; ?>">Cargar Más Poemas</a>
+        </div>
+    </div>
+    <p id="poemas-count">Número Total de Poemas: <?= count($distrees_url); ?></p>
+</div>
+
+<div class="container" id="dashboard">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="mb-4">Poemas de Amistad</h2>
+            <table class="table table-striped" id="poemas-table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Autor</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php $i = 0; ?>
+                <?php foreach ($friend_ship_url as $item): ?>
+                    <tr>
+                        <th scope="row"><?= ++$i; ?></th>
+                        <td><?= $item->title; ?></td>
+                        <td><?= $item->author; ?></td>
+                    </tr>
+                    <?php if ($i === 10): ?>
+                        <?php break; ?>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+            <a id="cargarPoemas" href="<?= $get_friend_ship_url; ?>">Cargar Más Poemas</a>
+        </div>
+    </div>
+    <p id="poemas-count">Número Total de Poemas: <?= count($friend_ship_url); ?></p>
+</div>
+
+<div class="container" id="dashboard">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="mb-4">Poemas de Ausencia</h2>
+            <table class="table table-striped" id="poemas-table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Autor</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php $i = 0; ?>
+                <?php foreach ($absence_url as $item): ?>
+                    <tr>
+                        <th scope="row"><?= ++$i; ?></th>
+                        <td><?= $item->title; ?></td>
+                        <td><?= $item->author; ?></td>
+                    </tr>
+                    <?php if ($i === 10): ?>
+                        <?php break; ?>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+            <a id="cargarPoemas" href="<?= $get_absence_poems_url; ?>">Cargar Más Poemas</a>
+        </div>
+    </div>
+    <p id="poemas-count">Número Total de Poemas: <?= count($absence_url); ?></p>
+</div>
+
+<div class="container" id="dashboard">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="mb-4">Poemas de Desolación</h2>
+            <table class="table table-striped" id="poemas-table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Autor</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php $i = 0; ?>
+                <?php foreach ($desolation_url as $item): ?>
+                    <tr>
+                        <th scope="row"><?= ++$i; ?></th>
+                        <td><?= $item->title; ?></td>
+                        <td><?= $item->author; ?></td>
+                    </tr>
+                    <?php if ($i === 10): ?>
+                        <?php break; ?>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+            <a id="cargarPoemas" href="<?= $get_desolation_poems_url; ?>">Cargar Más Poemas</a>
+        </div>
+    </div>
+    <p id="poemas-count">Número Total de Poemas: <?= count($desolation_url); ?></p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
